@@ -1,12 +1,39 @@
-# Getting Started with Create React App
+
+## Frontend Interview Task
+
+For this interview, we'll be making a really simple application that is meant
+for you to demonstrate your skills as a frontend developer.
+
+Please create a frontend with "fake" api calls to implement the following feature-set:
+
+- Signup Flow
+- Login Flow
+- Create a Todo
+- Edit a Todo
+- Remove a Todo
+- Update a Todo
+- List existing Todos
+
+Remember, the goal is for you to show your process, your creativity, and a little bit of ingenuity.
+
+NOTE: No backend is expected. This is intended to be simple, so don't worry about saving a password to a
+database or anything like that. Come up with your own way of "faking" api calls to demonstrate these features.
+
+
+For Sign up, we only need a username and password.
+Login will use that username and password to get in.
+
+Finally, create a simple, clean design for users to interact and create a Todo list.
+
+### Create React App Docs
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+#### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+`npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +41,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+`npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+`npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,7 +56,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+`npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
