@@ -14,16 +14,18 @@ Please create a frontend with "fake" api calls to implement the following featur
 - Update a Todo
 - List existing Todos
 
-Remember, the goal is for you to show your process, your creativity, and a little bit of ingenuity.
+Remember, the goal is for you to show your process, your creativity, attention to detail and quality, and a little bit of ingenuity.
 
 NOTE: No backend is expected. This is intended to be simple, so don't worry about saving a password to a
 database or anything like that. Come up with your own way of "faking" api calls to demonstrate these features.
 
-
 For Sign up, we only need a username and password.
+
 Login will use that username and password to get in.
 
-Finally, create a simple, clean design for users to interact and create a Todo list.
+For the core application, create a simple, clean design for users to interact and create a Todo list.
+
+Lastly, tests are highly encouraged.
 
 ## Submission Steps
 1. Fork this project
