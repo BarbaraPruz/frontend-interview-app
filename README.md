@@ -39,3 +39,16 @@ Please, feel free to send Ryman any questions you may have.
 
 [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+## My Submission
+Task was rescoped to just focus on To Do CRUD.
+
+Folder Structure:
+- components: presentation focused React components
+- pages: components with page layout and business logic. Note that sign up and login would have corresponding components in this folder.
+- services: functions to call APIs
+
+For demonstration purposes, every 5th backend API call will generate an error.
+
+External Libraries Used: fontawesome and bootstrap: these are directly imported in index.tsx and code just uses classes.
+
+Scripts added: lint (with eslint config files)

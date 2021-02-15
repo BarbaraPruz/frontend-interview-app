@@ -12,16 +12,21 @@ import TodoItem from "../components/TodoItem";
 
 export const TodoList: React.FC = () => {
   const [todos, setTodos] = React.useState<Todo[]>([]);
+  const [errorMsg, setErrorMsg] = React.useState<string>('');
 
   React.useEffect(() => {
     const getTodos = async () => {
-      const data = await fetchTodosAPI();
-      setTodos(data);
+      const {status, data} = await fetchTodosAPI();
+      if (status!=='ok')
+        setErrorMsg(status)
+      else
+        setTodos(data);
     };
     getTodos();
   }, []);
 
   const deleteTodo = async (id: string) => {
+    setErrorMsg('');
     const { status } = await deleteTodoAPI(id);
     if (status === "ok") {
       const workTodos = todos.filter((td) => td.id !== id);
@@ -30,12 +35,14 @@ export const TodoList: React.FC = () => {
   };
 
   const addNewTodo = async () => {
+    setErrorMsg('');
     const { todo, status } = await addTodoAPI("new to do");
     if (status === "ok") setTodos([todo, ...todos]);
     else handleError(status);
   };
 
   const changeTodo = async (update: Todo) => {
+    setErrorMsg('');
     const { todo, status } = await changeTodoAPI(update);
     if (status === "ok") {
       const index = todos.findIndex((td) => td.id === todo.id);
@@ -45,8 +52,7 @@ export const TodoList: React.FC = () => {
   };
 
   const handleError = (status: string) => {
-    // to do: no pun intended ;-) Show error to
-    // user either with alert or a general error area in UI
+    setErrorMsg(`oops, something went wrong on our side (${status}). Try again.`)
     console.log("API error", status);
   };
 
@@ -61,9 +67,9 @@ export const TodoList: React.FC = () => {
           onClick={addNewTodo}
         >
           <i className="fa fa-plus-square fa-2x"></i>
-        </button>
+        </button>      
       </header>
-
+      { errorMsg && <div className="error-message">{errorMsg}</div>}
       <div className="todos-items-container">
         {todos.map((todo) => (
           <TodoItem

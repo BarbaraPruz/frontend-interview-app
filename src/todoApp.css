@@ -8,6 +8,11 @@ body {
   box-shadow: none !important;
 }
 
+.error-message {
+  text-align:center;
+  color: red;
+}
+
 .todosList {
   margin-top: 25px;
   padding: 20px;
