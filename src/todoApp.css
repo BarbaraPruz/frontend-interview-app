@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.todosList {
+  margin-top: 25px;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 5px 5px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 2px 2px 5px 5px #ccc; /* Firefox 3.5 - 3.6 */
+  box-shadow: 2px 2px 5px 5px #ccc; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.todos-items-container {
+  width: 75%;
+  margin: auto;
+}
+
+.todoItem {
+  font-size: 1.5em;
+  display: flex;
+  padding-left: 40px;
+  align-items: center;
+  border: 1px solid #f2f2f2; 
+  margin-bottom: 10px;
+}
+
+.button-panel {
+  margin-left: auto; 
+}
+
+.button-panel > .btn {
+  padding-left: 0;
+}
+
+input[type="checkbox"] {
+  -ms-transform: scale(2.5); /* IE */
+  -moz-transform: scale(2.5); /* FF */
+  -webkit-transform: scale(2.5); /* Safari and Chrome */
+  -o-transform: scale(2.5); /* Opera */
+  transform: scale(2.5); 
+  margin-top: -5px;
+  margin-right: 25px;
+}
