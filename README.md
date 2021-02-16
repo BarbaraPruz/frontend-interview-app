@@ -49,6 +49,9 @@ Folder Structure:
 
 For demonstration purposes, every 5th backend API call will generate an error.
 
-External Libraries Used: fontawesome and bootstrap: these are directly imported in index.tsx and code just uses classes.
+External Libraries Used: 
+- fontawesome and bootstrap: these are directly imported in index.tsx and code just uses classes.
+- React Tooltip
+- React Styled Components: In general, app uses straight CSS (from todoApp.css or bootstrap css). But a custom checkbox component was created. To keep this component's styling from polluting the app's css or the app file space, React Styled component approach is used. This also makes the component potentially re-usable in other apps.
 
 Scripts added: lint (with eslint config files)

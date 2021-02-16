@@ -1,4 +1,5 @@
 import React from "react";
+import TodoCheckbox from "./TodoCheckbox";
 
 interface TodoItemProps {
   todo: Todo;
@@ -33,15 +34,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({
 
   return (
     <div className="todoItem">
-      <div style={{ width: "30px", textAlign: "left" }}>
-        <input
-          className="form-check-input"
-          type="checkbox"
-          onChange={toggleComplete}
-          checked={todo.complete}
-        />
-      </div>
-
+      <TodoCheckbox checked={todo.complete} onToggle={toggleComplete} />
       {inEdit ? (
         <input
           type="text"

@@ -81,7 +81,7 @@ export const TodoList: React.FC = () => {
         ))}
       </div>
 
-      <ReactTooltip type="info" />
+      <ReactTooltip type="info" backgroundColor="#8ebf42"/>
     </div>
   );
 };
